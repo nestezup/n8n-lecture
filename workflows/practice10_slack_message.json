@@ -1,0 +1,70 @@
+{
+  "name": "실습 10: 슬랙 메시지 보내기",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ],
+      "id": "180da7c4-1286-422f-bd2f-4a1042b84e14",
+      "name": "When clicking 'Execute workflow'"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "C08DZ405KHR",
+          "mode": "list",
+          "cachedResultName": "소셜"
+        },
+        "text": "안녕하세요",
+        "otherOptions": {}
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        450,
+        300
+      ],
+      "id": "f95ad95f-1b46-4a28-890e-f929e3a3adb1",
+      "name": "Send a message",
+      "webhookId": "6602d700-8e21-44f0-ba92-6e5c23a1195d",
+      "credentials": {
+        "slackOAuth2Api": {
+          "id": "3r6sUblK9m8JHMdM",
+          "name": "Slack account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "When clicking 'Execute workflow'": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "00000000-0000-0000-0000-000000000000",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "68d1c51b855d2dc0279720214480b41f2c85f0df21ac6cc1a6f0e9dc96935b36"
+  },
+  "id": "00000000-0000-0000-0000-00000000000a",
+  "tags": []
+}
