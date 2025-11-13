@@ -1185,6 +1185,53 @@ return {
                     </div>
                 </div>
             </div>
+
+            <!-- 구글 시트 생성 워크플로우 -->
+            <div style="margin-top: 2em; text-align: center;">
+                <h3>📋 구글 시트 생성 워크플로우</h3>
+                <p style="margin-bottom: 1em;">새로운 구글 시트를 자동으로 생성하는 워크플로우 예제</p>
+
+                <!-- 워크플로우 다이어그램 -->
+                <div style="display: flex; justify-content: center; align-items: center; margin: 1.5em 0; gap: 1em; flex-wrap: wrap;">
+                    <div style="background: #e8f4fd; border: 2px solid #2196f3; border-radius: 8px; padding: 1em; text-align: center; min-width: 120px;">
+                        <strong>When clicking<br>'Execute workflow'</strong><br>
+                        <small style="color: #666;">Manual Trigger</small>
+                    </div>
+                    <div style="font-size: 1.5em;">→</div>
+                    <div style="background: #e8f5e8; border: 2px solid #4caf50; border-radius: 8px; padding: 1em; text-align: center; min-width: 120px;">
+                        <strong>Create<br>spreadsheet</strong><br>
+                        <small style="color: #666;">Google Sheets</small>
+                    </div>
+                </div>
+
+                <!-- 다운로드 버튼 -->
+                <div style="margin-top: 1.5em;">
+                    <a href="workflows/create-googlesheet.json" download="create-googlesheet.json"
+                       style="display: inline-block; background: #4caf50; color: white; padding: 0.8em 1.5em;
+                              text-decoration: none; border-radius: 5px; font-weight: bold;
+                              box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                              transition: transform 0.2s, box-shadow 0.2s;"
+                       onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';"
+                       onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.2)';">
+                        📥 워크플로우 다운로드 (JSON)
+                    </a>
+                </div>
+
+                <!-- 워크플로우 설명 -->
+                <div style="text-align: left; margin-top: 1.5em; background: #f8f9fa; padding: 1em; border-radius: 8px;">
+                    <h4>📝 워크플로우 설명:</h4>
+                    <ol style="margin: 0.5em 0; padding-left: 1.5em;">
+                        <li><strong>Manual Trigger</strong>: 워크플로우를 수동으로 실행합니다</li>
+                        <li><strong>Google Sheets (Create spreadsheet)</strong>: "n8n-test"라는 이름의 새 구글 시트를 생성합니다</li>
+                    </ol>
+                    <p style="margin-top: 1em;"><strong>특징:</strong></p>
+                    <ul style="margin: 0; padding-left: 1.5em;">
+                        <li>구글 시트 OAuth2 인증 필요</li>
+                        <li>자동으로 "test" 시트 포함</li>
+                        <li>사용자 구글 드라이브에 저장됨</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <!-- 구글 시트 활용 -->
